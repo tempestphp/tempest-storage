@@ -12,7 +12,7 @@ use League\Flysystem\PhpseclibV3\SftpAdapter;
 use League\Flysystem\ReadOnly\ReadOnlyFilesystemAdapter;
 use League\Flysystem\ZipArchive\ZipArchiveAdapter;
 
-final class MissingAdapterException extends Exception implements StorageException
+final class AdapterWasMissing extends Exception implements StorageException
 {
     public function __construct(
         private readonly string $missing,
